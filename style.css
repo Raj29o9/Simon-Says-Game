@@ -1,0 +1,112 @@
+body {
+    text-align: center;     
+}
+
+.bodybackground{
+    background-image: url(background.jpg);
+}
+
+h1 {
+    color: #ff4757;
+    font-size: 3rem;
+    margin-top: 2rem;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px #ff6b81, 4px 4px #2f3542;
+}
+
+
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+    background: linear-gradient(90deg, #ff6f61, #d4fc79);
+    -webkit-background-clip: text; 
+    color:transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4 );
+}
+
+h3 {
+    font-family: 'Georgia', serif;
+    text-decoration: underline;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    background: linear-gradient(90  deg, #b8c6db, #f5f7fa);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.btn {
+    height: 150px;
+    width: 150px;
+    border-radius: 20%;
+    border: 8px solid black;
+    margin: 0.5rem;
+}
+
+.yellow {
+    background-color: #f99b45;
+}
+
+.red {
+    background-color: #d95980;
+}
+
+.purple {
+    background-color: #819ff9;
+}
+
+.green {
+    background-color: #61aa60;
+}
+
+.flash {
+    background-color: white;
+}
+
+.userflash {
+    background-color: green;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btn {
+        height: 120px;
+        width: 120px;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        height: 80px;
+        width: 80px;
+        border-width: 5px;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+}
