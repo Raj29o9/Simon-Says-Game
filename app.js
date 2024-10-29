@@ -1,5 +1,6 @@
 let body=document.querySelector('body');
-body.classList.add("bodybackground")
+body.classList.add("bodybackground");
+
 let gameSeq=[];
 let userSeq=[];
 
@@ -9,8 +10,23 @@ let started=false;
 let level=0;
 let HS=0;
 let h2=document.querySelector("h2");
+    if (window.innerWidth <= 1200) {
+        h2.innerText = "Tap START button To Start The Game";  
+    } else {
+        h2.innerText = "Press Any Key To Start The Game";
+    }
 
 document.addEventListener("keypress",function()
+{
+    if(started==false)
+        {
+            started=true;
+            levelUp();
+        }
+});
+
+let phnbtn=document.querySelector(".phnbtn");
+phnbtn.addEventListener("click",function()
 {
     if(started==false)
         {
@@ -58,9 +74,13 @@ function checkAns(idx)
         }
     }
     else{
-        h2.innerHTML=`Game over! Your score was <b>${level}</b> <br> Press any key to start`;
-        body.classList.remove("bodybackground")
-        body.style.backgroundColor="red";
+        if (window.innerWidth <= 768) {
+            h2.innerHTML = `Game over! your Score was <b>${level}</b> <br> press START  Button to start`;
+        } else {
+            h2.innerHTML = `Game over! Your score was <b>${level}</b> <br> Press any key to start`;
+        }
+        body.classList.remove("bodybackground");
+        body.style.backgroundColor = "red";
         setTimeout(function()
     {
         body.classList.add("bodybackground");
@@ -70,13 +90,18 @@ function checkAns(idx)
     }
 }
 
-function btnPress(){
+
+ function btnPress(){
+    if(started==true)
+    {
     let btn=this;
     userFlash(btn);
     let userColor=btn.getAttribute("id");
     userSeq.push(userColor);
     checkAns(userSeq.length-1);
+    }
 }
+
 
 
 let allbtns=document.querySelectorAll(".btn");

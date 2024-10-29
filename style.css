@@ -11,7 +11,7 @@ h1 {
     font-size: 3rem;
     margin-top: 2rem;
     font-family: 'Press Start 2P', cursive;
-    text-shadow: 2px 2px #ff6b81, 4px 4px #2f3542;
+    text-decoration:underline;
 }
 
 
@@ -76,8 +76,10 @@ h3 {
 .userflash {
     background-color: green;
 }
+.phnbtn{
+    display: none;
+}
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .btn {
         height: 120px;
@@ -91,6 +93,33 @@ h3 {
     }
     h3{
         font-size: 2rem;
+    }
+    .phnbtn{
+        display: block;
+        position: relative;
+    }
+
+    #strtbtn {
+        background: linear-gradient(135deg, #4CAF50, #8BC34A); 
+        border: 2px solid #388E3C;
+        border-radius: 15px; 
+        color: white; /* Text color */
+        padding: 5px 15px; 
+        font-size: 25px; /* Font size */
+        font-weight: bold; /* Bold font */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+        cursor: pointer; /* Pointer on hover */
+        transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    }
+    
+    #strtbtn:hover {
+        background: linear-gradient(135deg, #388E3C, #4CAF50); /* Color shift on hover */
+        transform: translateY(-2px); /* Lift effect on hover */
+    }
+    
+    .container{
+        position: relative;
+        top: 100px;
     }
 }
 
@@ -109,4 +138,29 @@ h3 {
     h3{
         font-size: 1.5rem;
     }
-}
+    .phnbtn{
+        display: block;
+        position: relative;     
+    }
+    #strtbtn {
+        background: linear-gradient(135deg, #4CAF50, #8BC34A); 
+        border: 2px solid #388E3C;
+        border-radius: 10px; 
+        color: white; 
+        padding: 5px 15px; 
+        font-size: 15px; 
+        font-weight: bold; 
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease; 
+    }
+    
+    #strtbtn:hover {
+        background: linear-gradient(135deg, #388E3C, #4CAF50); 
+        transform: translateY(-2px);
+    }   
+    .container{
+        position: relative;
+        top:200px;
+    }
+    }
