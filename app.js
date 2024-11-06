@@ -11,7 +11,7 @@ let level=0;
 let HS=0;
 let h2=document.querySelector("h2");
     if (window.innerWidth <= 1200) {
-        h2.innerText = "Tap START button To Start The Game";  
+        h2.innerText = "Press START button To Start The Game";  
     } else {
         h2.innerText = "Press Any Key To Start The Game";
     }
